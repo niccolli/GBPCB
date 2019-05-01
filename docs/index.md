@@ -1,3 +1,3 @@
-# GBPCB
+# GBPCB docs
 
 this is test page.
