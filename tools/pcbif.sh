@@ -28,19 +28,19 @@ do
     fi
     case "$OPT" in
         '--write-rom' )
-            echo "write rom"
+            dfu-util -D $2 -d 0483:df11 -a 0 -s 0x08100000 -Z 0x100000
             exit 1
             ;;
         '--write-ram' )
-            echo "write ram"
+            dfu-util -D $2 -d 0483:df11 -a 0 -s 0x080E0000 -Z 0x20000
             exit 1
             ;;
         '--write-mbc' )
-            echo "write mbc"
+            dfu-util -D $2 -d 0483:df11 -a 0 -s 0x08000000
             exit 1
             ;;
         '--read-ram' )
-            echo "read ram"
+            dfu-util -U $2 -d 0483:df11 -a 0 -s 0x080E0000 -Z 0x20000
             exit 1
             ;;
         *)
