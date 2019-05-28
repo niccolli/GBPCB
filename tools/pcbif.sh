@@ -4,7 +4,7 @@ PROGNAME=$(basename $0)
 VERSION="1.0"
 
 usage() {
-    echo "Usage: $PROGNAME [OPTIONS] FILE"
+    echo "Usage: $PROGNAME OPTIONS FILE"
     echo "  This is cartridge read/write interface."
     echo "  For more detail, please refer to this page. https://niccol.li/cartridge/"
     echo ""
@@ -22,6 +22,10 @@ usage() {
 # $2:   第2引数
 for OPT in "$@"
 do
+    if [ -z $2]; then
+        usage
+        exit 1
+    fi
     case "$OPT" in
         '--write-rom' )
             echo "write rom"
