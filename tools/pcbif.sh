@@ -23,6 +23,22 @@ usage() {
 for OPT in "$@"
 do
     case "$OPT" in
+        '--write-rom' )
+            echo "write rom"
+            exit 1
+            ;;
+        '--write-ram' )
+            echo "write ram"
+            exit 1
+            ;;
+        '--write-mbc' )
+            echo "write mbc"
+            exit 1
+            ;;
+        '--read-ram' )
+            echo "read ram"
+            exit 1
+            ;;
         *)
             usage
             exit 1
