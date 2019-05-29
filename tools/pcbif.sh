@@ -9,10 +9,10 @@ usage() {
     echo "  For more detail, please refer to this page. https://niccol.li/cartridge/"
     echo ""
     echo "Options:"
-    echo "  --write-rom   "
-    echo "  --write-ram   "
-    echo "  --write-mbc   "
-    echo "  --read-ram    "
+    echo "  --write-rom   Write FILE to ROM area."
+    echo "  --write-ram   Write FILE to RAM area."
+    echo "  --write-mbc   Write FILE to MBC area."
+    echo "  --read-ram    Read saved RAM data to FILE."
     echo ""
     exit 1
 }
