@@ -43,6 +43,7 @@ MBC5相当のカートリッジとして動作します。
 - ./pcbif.sh --read-ram ファイル名
     - 指定したファイルに、カートリッジRAMの内容を保存します。
 
+#### Windowsの場合
 
 ## 制限
 
@@ -53,3 +54,11 @@ MBC5相当のカートリッジとして動作します。
 
 - MicroUSBコネクタは外れやすいので、抜き差しの際にはまっすぐに、不用意な力がかからないように気をつけてください。
 - コイン電池が挿入されている状態で、電池横のカバー支柱に針金等導電性の物を触れさせないでください。ショートして電池が破裂します。テープでふさぐなどして対応ください。
+
+## 謝辞
+
+このカートリッジの仕組みは、Dholeさんが公開していたものを利用しています。
+
+- [Emulating a GameBoy Cartridge with an STM32F4. Part 1](https://dhole.github.io/post/gameboy_cartridge_emu_1/)
+- [Emulating a GameBoy Cartridge with an STM32F4. Part 2](https://dhole.github.io/post/gameboy_cartridge_emu_2/)
+- [Booting the GameBoy with a custom logo](https://dhole.github.io/post/gameboy_custom_logo/)
