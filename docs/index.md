@@ -47,6 +47,8 @@ MBC5相当のカートリッジとして動作します。
 
 #### Windowsの場合
 
+USBで本体とPCを接続し、dfu-utilで書き換えを行おうとしても「Cannot open DFU device 0483:df11 No DFU capable USB device available」と表示される場合は、ドライバの入れ替えが必要です。[こちら](https://seeedjp.github.io/Wiki/Wio_LTE_for_Arduino/ReplaceDriver-ja.html)の記載に従ってドライバを入れ替えたあとに、再度試してください。バージョンは2.4でも動作します。
+
 ## 制限
 
 - MBC5相当の機能を持っていますが、カートリッジROMの容量は基本的に1MBまでです。
