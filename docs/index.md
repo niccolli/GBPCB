@@ -49,6 +49,24 @@ MBC5相当のカートリッジとして動作します。
 
 USBで本体とPCを接続し、dfu-utilで書き換えを行おうとしても「Cannot open DFU device 0483:df11 No DFU capable USB device available」と表示される場合は、ドライバの入れ替えが必要です。[こちら](https://seeedjp.github.io/Wiki/Wio_LTE_for_Arduino/ReplaceDriver-ja.html)の記載に従ってドライバを入れ替えたあとに、再度試してください。バージョンは2.4でも動作します。
 
+1. [SourceForge](https://sourceforge.net/projects/dfu-util/files/)からWindows用のdfu-util (dfu-util-0.9-win64.zip) をダウンロードします。
+2. カートリッジの[リポジトリ](https://github.com/niccolli/cartridge)をクローン、またはダウンロードしてください。
+3. cartridgeフォルダ内のtoolsフォルダに、1でダウンロードした dfu-util.exe をコピーします。
+4. PowerShellから、toolsフォルダ内の.\pcbif.ps1を実行してください。
+
+- .\pcbif.ps1 -WriteROM ファイル名
+    - 指定したファイルの内容を、マイコンのカートリッジROM領域に展開します。
+- .\pcbif.ps1 -WriteRAM ファイル名
+    - 指定したファイルの内容を、マイコンのカートリッジRAM領域に展開します。
+- .\pcbif.ps1 -WriteMBC ファイル名
+    - 指定したファイルの内容を、マイコンの先頭(MBC領域)に展開します。
+- .\pcbif.ps1 -ReadRAM ファイル名
+    - 指定したファイルに、カートリッジRAMの内容を保存します。
+
+PowerShellから「このシステムではスクリプトの実行が無効になっているため……」というエラーが表示される場合、シェル上で "powershell -ExecutionPolicy RemoteSigned .\pcbif.ps1 オプション" として実行してください。
+
+複数のオプションを指定した場合、上のものを優先します。
+
 ## 制限
 
 - MBC5相当の機能を持っていますが、カートリッジROMの容量は基本的に1MBまでです。
