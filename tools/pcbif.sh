@@ -22,7 +22,7 @@ usage() {
 # $2:   第2引数
 for OPT in "$@"
 do
-    if [ -z $2]; then
+    if [ -z $2 ] ; then
         usage
         exit 1
     fi
