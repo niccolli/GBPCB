@@ -28,7 +28,7 @@ MBC5相当のカートリッジとして動作します。基本的に白黒ゲ�
 
 ### 書き換え
 
-インタフェースとして[dfu-util](http://dfu-util.sourceforge.net)を使用しています。macOS / Windows / Linuxのそれぞれで動作します。
+インタフェースとして[dfu-util](http://dfu-util.sourceforge.net)を使用しています。macOS / Windows / Linuxのそれぞれで動作します。必ずdfu-utilのVer. 0.9を使用してください。
 
 書き換えの際はボタン電池を抜いてください。コイン電池が入ったままUSBで接続した場合は、USBケーブルを抜いたあとに電池を一度取り外してください。
 
@@ -53,7 +53,7 @@ USBで本体とPCを接続し、dfu-utilで書き換えを行おうとしても�
 
 1. [SourceForge](https://sourceforge.net/projects/dfu-util/files/)からWindows用のdfu-util (dfu-util-0.9-win64.zip) をダウンロードします。
 2. カートリッジの[リポジトリ](https://github.com/niccolli/cartridge)をクローン、またはダウンロードしてください。
-3. cartridgeフォルダ内のtoolsフォルダに、1でダウンロードした dfu-util.exe をコピーします。
+3. cartridgeフォルダ内のtoolsフォルダに、1でダウンロードした dfu-util のファイル一式 をコピーします。
 4. PowerShellから、toolsフォルダ内の.\pcbif.ps1を実行してください。
 
 - .\pcbif.ps1 -WriteROM ファイル名
@@ -79,6 +79,7 @@ PowerShellから「このシステムではスクリプトの実行が無効に�
 
 ## 注意
 
+- ゲームボーイアドバンスでは、基板形状でGBA専用と誤認識してしまうため、動作しません。
 - MicroUSBコネクタは外れやすいので、抜き差しの際にはまっすぐに、不用意な力がかからないように気をつけてください。
 - コイン電池が挿入されている状態で、電池横のカバー支柱に針金等導電性の物を触れさせないでください。ショートして電池が破裂します。テープでふさぐなどして対応ください。
 
