@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: GBPCB.CMPcbDoc   2019/05/02  13:20:15
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : GBPCB.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        11.81mil (0.29997mm)     Round          136              26.56 Inch (674.71 mm)
+T2        118.11mil (2.99999mm)    Round          4         NPTH   5.81 Inch (147.66 mm)
+---------------------------------------------------------------------------
+Totals                                            140              32.38 Inch (822.36 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:01
